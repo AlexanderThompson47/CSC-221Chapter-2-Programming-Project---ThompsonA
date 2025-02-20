@@ -2,15 +2,15 @@
 using namespace std;
 
 int main() {
-    const double TANK_CAPACITY = 20.0;      // gallons
-    const double MPG_TOWN = 23.5;           // miles per gallon in town
-    const double MPG_HIGHWAY = 28.9;        // miles per gallon on the highway
+    const int TOTAL_CUSTOMERS = 16500;    // total number of customers surveyed
+    const double PERCENT_ENERGY_DRINKS = 0.15;    // 15 percent of customers purchase energy drinks
+    const double PERCENT_CITRUS_DRINKS = 0.58;    // 58 percent of energy drink customers prefer citrus flavor
 
-    double distance_in_town = TANK_CAPACITY * MPG_TOWN;
-    double distance_on_highway = TANK_CAPACITY * MPG_HIGHWAY;
+    int num_energy_drink_customers = TOTAL_CUSTOMERS * PERCENT_ENERGY_DRINKS;
+    int num_citrus_drink_customers = num_energy_drink_customers * PERCENT_CITRUS_DRINKS;
 
-    cout << "The distance the car can travel on one tank of gas in town is: " << distance_in_town << " miles." << endl;
-    cout << "The distance the car can travel on one tank of gas on the highway is: " << distance_on_highway << " miles." << endl;
+    cout << "Approximate number of customers purchasing one or more energy drinks per week: " << num_energy_drink_customers << endl;
+    cout << "Approximate number of customers preferring citrus-flavored energy drinks: " << num_citrus_drink_customers << endl;
 
     return 0;
 }
