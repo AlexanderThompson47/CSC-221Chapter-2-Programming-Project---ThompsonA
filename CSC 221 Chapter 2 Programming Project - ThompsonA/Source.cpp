@@ -2,18 +2,15 @@
 using namespace std;
 
 int main() {
-    const double RISING_RATE = 1.5;  // millimeters per year
-    int years1 = 5;
-    int years2 = 7;
-    int years3 = 10;
+    const double TANK_CAPACITY = 20.0;      // gallons
+    const double MPG_TOWN = 23.5;           // miles per gallon in town
+    const double MPG_HIGHWAY = 28.9;        // miles per gallon on the highway
 
-    double rise_in_5_years = years1 * RISING_RATE;
-    double rise_in_7_years = years2 * RISING_RATE;
-    double rise_in_10_years = years3 * RISING_RATE;
+    double distance_in_town = TANK_CAPACITY * MPG_TOWN;
+    double distance_on_highway = TANK_CAPACITY * MPG_HIGHWAY;
 
-    cout << "In " << years1 << " years, the ocean's level will be " << rise_in_5_years << " millimeters higher than the first year." << endl;
-    cout << "In " << years2 << " years, the ocean's level will be " << rise_in_7_years << " millimeters higher than the first year." << endl;
-    cout << "In " << years3 << " years, the ocean's level will be " << rise_in_10_years << " millimeters higher than the first year." << endl;
+    cout << "The distance the car can travel on one tank of gas in town is: " << distance_in_town << " miles." << endl;
+    cout << "The distance the car can travel on one tank of gas on the highway is: " << distance_on_highway << " miles." << endl;
 
     return 0;
 }
